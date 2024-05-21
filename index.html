@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <table class="portfolio-container">
+      <tbody>
+        <tr class="ng-star-inserted">
+          <td class="cell-right col-empty cell-first"></td>
+          <td class="cell-left col-uaction ng-star-inserted">
+            <span class="upColor bold pointer">BUY</span> |
+            <span class="dnColor bold pointer">SELL</span>
+          </td>
+          <td
+            class="cell-left col-ustock ng-star-inserted"
+            style="cursor: pointer"
+          >
+            AEV
+          </td>
+          <td class="cell-right col-ulast upColor">38.05</td>
+          <td class="cell-right col-udiff upColor ng-star-inserted">0.70</td>
+          <td class="cell-right col-uavgcost">39.2498</td>
+          <td class="cell-right col-ushares ng-star-inserted">1,500</td>
+          <td class="cell-right col-sellposting">0</td>
+          <td class="cell-right col-umktvalue">56,564.18</td>
+          <td class="cell-right col-utotalcost">,58,874.70</td>
+          <td class="cell-right col-uprofitloss dnColor">-2,310.52</td>
+          <td class="cell-right col-upctpl cell-last dnColor">-3.92%</td>
+          <td class="cell-right col-empty"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="form-group padding-tb-3">
+      <div class="form-input">
+        <label>TYPE</label
+        ><span class="inputify pointer" dropdown="" dropdown-open="">
+          LIMIT <i class="fas fa-caret-down dropdown-icon"></i
+        ></span>
+        <div class="faq-button"></div>
+        <ul class="dropdown-menu">
+          <li class="ng-star-inserted">
+            <a class="ng-star-inserted"
+              ><span class="code">LIMIT</span
+              ><span class="name">LIMIT ORDER</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="form-input">
+        <label>STOCK</label
+        ><input
+          autocomplete="off"
+          maxlength="8"
+          name="secCode"
+          tabindex="2"
+          type="text"
+          class="ng-untouched ng-pristine ng-valid"
+        />
+        <ul class="dropdown-menu">
+          <div class="dropdown-search" dropdown-not-closable-zone="">
+            <input
+              autocomplete="off"
+              dropdown-not-closable-zone=""
+              name="search"
+              placeholder="Search Stock"
+              type="text"
+            />
+          </div>
+          <div
+            class="scroll-list mCustomScrollbar _mCS_14 mCS-autoHide mCS_no_scrollbar"
+            tsscrollable=""
+            style="overflow: visible"
+          >
+            <div
+              id="mCSB_14"
+              class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside"
+              tabindex="0"
+              style="max-height: none"
+            >
+              <div
+                id="mCSB_14_container"
+                class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                style="position: relative; top: 0; left: 0"
+                dir="ltr"
+              ></div>
+            </div>
+            <div
+              id="mCSB_14_scrollbar_vertical"
+              class="mCSB_scrollTools mCSB_14_scrollbar mCS-minimal mCSB_scrollTools_vertical"
+              style="display: none"
+            >
+              <div class="mCSB_draggerContainer">
+                <div
+                  id="mCSB_14_dragger_vertical"
+                  class="mCSB_dragger"
+                  style="position: absolute; min-height: 50px; top: 0px"
+                >
+                  <div class="mCSB_dragger_bar" style="line-height: 50px"></div>
+                  <div class="mCSB_draggerRail"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="form-input">
+        <label> VOLUME </label
+        ><input
+          autocomplete="off"
+          class="volume ng-untouched ng-pristine ng-valid"
+          name="volume"
+          tabindex="3"
+          type="text"
+          placeholder=""
+        />
+        <i
+          class="fas fa-caret-down dropdown-icon ng-star-inserted"
+          dropdown=""
+          dropdown-open=""
+        ></i>
+        <ul class="dropdown-menu" dropdown-not-closable-zone=""></ul>
+      </div>
+      <div class="form-input">
+        <label> PRICE </label
+        ><input
+          autocomplete="off"
+          name="price"
+          tabindex="4"
+          type="text"
+          class="ng-untouched ng-pristine ng-valid"
+        />
+        <i
+          class="fas fa-caret-down dropdown-icon ng-star-inserted"
+          dropdown=""
+          dropdown-open=""
+        ></i>
+        <div class="info-button"></div>
+        <ul class="dropdown-menu" dropdown-not-closable-zone=""></ul>
+      </div>
+      <div class="form-input hidden" dropdown="">
+        <label></label
+        ><input
+          autocomplete="off"
+          name="stop"
+          tabindex="6"
+          type="text"
+          class="ng-untouched ng-pristine ng-valid"
+        />
+        <i
+          class="fas fa-caret-down dropdown-icon ng-star-inserted"
+          dropdown=""
+          dropdown-open=""
+        ></i>
+        <ul class="dropdown-menu" dropdown-not-closable-zone=""></ul>
+      </div>
+      <div class="form-input">
+        <label> EXPIRY </label
+        ><input name="expiryDate" ngx-mydatepicker="" type="text" />
+        <span class="inputify" dropdown="" dropdown-open="">
+          DAY <i class="fas fa-caret-down dropdown-icon"></i>
+        </span>
+        <ul class="dropdown-menu">
+          <li class="ng-star-inserted"><a>DAY</a></li>
+
+          <li class="ng-star-inserted"><a>GTW</a></li>
+
+          <li class="ng-star-inserted"><a>GTM</a></li>
+        </ul>
+      </div>
+      <div
+        class="form-group hidden"
+        dropdown=""
+        style="border: none !important"
+      >
+        <label class="form-label"></label><span class="form-value"></span>
+      </div>
+      <div class="form-input hidden" dropdown="">
+        <label></label
+        ><input
+          autocomplete="off"
+          name="price2"
+          tabindex="6"
+          type="text"
+          class="ng-untouched ng-pristine ng-valid"
+        />
+        <i
+          class="fas fa-caret-down dropdown-icon ng-star-inserted"
+          dropdown=""
+          dropdown-open=""
+        ></i>
+        <ul class="dropdown-menu" dropdown-not-closable-zone=""></ul>
+      </div>
+      <div class="form-input hidden" dropdown="">
+        <label></label
+        ><input
+          autocomplete="off"
+          name="stop2"
+          tabindex="7"
+          type="text"
+          class="ng-untouched ng-pristine ng-valid"
+        />
+        <i
+          class="fas fa-caret-down dropdown-icon ng-star-inserted"
+          dropdown=""
+          dropdown-open=""
+        ></i>
+        <ul class="dropdown-menu" dropdown-not-closable-zone=""></ul>
+      </div>
+      <div class="form-input hidden">
+        <label> </label
+        ><input name="expiryDate" ngx-mydatepicker="" type="hidden" />
+        <span class="inputify ng-star-inserted" dropdown="" dropdown-open="">
+          DAY <i class="fas fa-caret-down dropdown-icon"></i>
+        </span>
+
+        <ul class="dropdown-menu ng-star-inserted">
+          <li class="ng-star-inserted"><a>DAY</a></li>
+
+          <li class="ng-star-inserted"><a>GTW</a></li>
+
+          <li class="ng-star-inserted"><a>GTM</a></li>
+        </ul>
+      </div>
+      <div class="form-group hidden" style="border: none !important">
+        <span class="form-label buy">% DIFF of BUY<br /></span
+        ><span class="form-label sell">&amp; SELL ORDER</span>
+      </div>
+      <div class="form-input">
+        <label class="custom-checkbox" for="isIceberg"
+          >ICEBERG
+          <input
+            id="isIceberg"
+            name="isIceberg"
+            type="checkbox"
+            class="ng-untouched ng-pristine ng-valid" /><span
+            class="checkmark"
+          ></span
+        ></label>
+      </div>
+      <div class="form-input">
+        <label>DISCLOSED</label
+        ><input
+          name="disclosedQty"
+          tabindex="8"
+          type="text"
+          disabled=""
+          class="ng-untouched ng-pristine ng-valid"
+        />
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
